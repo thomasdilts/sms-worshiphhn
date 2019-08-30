@@ -20,10 +20,6 @@
     "require": {
         "php": ">=7.0.0",
     },
-    "suggest": {
-        "ext-intl": "Needed to support internationalized email addresses",
-        "true/punycode": "Needed to support internationalized email addresses, if ext-intl is not installed"
-    },
     "autoload": {
         "psr-4": {
             "thomasdilts\\sms-worshiphhn\\": ""
