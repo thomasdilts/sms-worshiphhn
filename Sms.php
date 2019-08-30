@@ -25,7 +25,7 @@ abstract class Sms
 	
 	/**
 	 * @param string $message The message to send.
-	 * @param array $phoneNumbers An array of numbers to send to. The numbers may not include anything but numbers and starting with the country code number(s).
+	 * @param string $phoneNumber A telephone number to send to. The number may not include anything but numbers and must start with the country code number(s).
 	 * @return array The array must contain the keys 'id', 'statusId', 'statusText'  
 	 *      where 'id' is the ID of the sent SMS which is used for later getting status. This can be blank or zero if not implemented.
 	 *            'statusId' is some very short and usually integer that shows the status. This can be blank.
