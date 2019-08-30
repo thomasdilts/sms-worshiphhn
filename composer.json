@@ -2,7 +2,7 @@
     "name": "thomasdilts/sms-worshiphhn",
     "type": "library",
     "description": "The SMS class that all sms libraries must subclass to be used by the worshiphhn project",
-    "keywords": ["worshiphhn","SMS",'yii2'],
+    "keywords": ["worshiphhn","SMS","yii2"],
     "homepage": "http://worshiphhn.org",
     "license": "GPL-3.0-or-later",
     "support": {
