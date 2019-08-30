@@ -4,7 +4,6 @@
  */
 abstract class Sms
 {
-	
 	/**
 	 * Using this constant in getImplementationLevel means your code will be able to return a unique identifier for a sent SMS. 
 	 * This unique identifier can then be used to make later requests for SMS status.
@@ -21,7 +20,7 @@ abstract class Sms
 	 * @return integer Bitwise AND of the implementation constants, for instance, (IMPLEMENTED_ID_AND_STATUS & IMPLEMENTED_RECEIVE_SMS). 
 	 *     Returning zero means that only sending of an SMS is implemented. No statuses or IDs are implemented.
 	 */
-    abstract public function getImplementationLevel();
+	abstract public function getImplementationLevel();
 	
 	/**
 	 * @param string $message The message to send.
@@ -31,7 +30,7 @@ abstract class Sms
 	 *            'statusId' is some very short and usually integer that shows the status. This can be blank.
 	 *            'statusText' a text explaining the 'statusId'. This can be blank.
 	 */
-    abstract public function sendSms($message,$phoneNumbers);
+	abstract public function sendSms($message,$phoneNumbers);
 	
 	/**
 	 * This will only be called if getImplementationLevel returns IMPLEMENTED_ID_AND_STATUS.
@@ -46,15 +45,16 @@ abstract class Sms
 	 *      where 'statusId' is some very short and usually integer that shows the status. This can be blank.
 	 *            'statusText' a text explaining the 'statusId'. This can be blank.
 	 */
-	 abstract public function getSmsStatus($smsId,$smsLastStatusId,$smsLastStatusText);
+	abstract public function getSmsStatus($smsId,$smsLastStatusId,$smsLastStatusText);
 	 
 	/**
 	 * This is only for the future. Do not implement yet. Just put an empty function for this in your sub-class.
+	 * In the future, this will only be called if getImplementationLevel returns IMPLEMENTED_RECEIVE_SMS.
 	 *
 	 * @return array The array must contain a list of arrays that have the keys 'telenumber', 'message'.
 	 *      where 'telenumber' is a telephone number that was previously used in a sendSms call.
-	 *            'message' The text message received.
+	 *            'message' The text message received from the previous 'telenumber'.
 	 */
-    abstract public function receivedSms();	
+	abstract public function receivedSms();	
 	
 }
