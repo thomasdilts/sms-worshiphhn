@@ -1,5 +1,5 @@
 <?php
-namespace base;
+namespace thomasdilts\sms_worshiphhn; 
 /**
  * This class is the super-class for all SMS implementations for the project thomasdilts/worshiphhn.
  */
