@@ -25,13 +25,14 @@ abstract class Sms
 	
 	/**
 	 * @param string $message The message to send.
-	 * @param string $phoneNumber A telephone number to send to. The number may not include anything but numbers and must start with the country code number(s).
+	 * @param string $phoneNumber A telephone number to send to.
+	 * @param string $fromNumber Who sends the message. Can be a number or name.
 	 * @return array The array must contain the keys 'id', 'statusId', 'statusText'  
 	 *      where 'id' is the ID of the sent SMS which is used for later getting status. This can be blank or zero if not implemented.
 	 *            'statusId' is some very short and usually integer that shows the status. This can be blank.
 	 *            'statusText' a text explaining the 'statusId'. This can be blank.
 	 */
-	abstract public function sendSms($message,$phoneNumbers);
+	abstract public function sendSms($message,$phoneNumbers,$fromNumber);
 	
 	/**
 	 * This will only be called if getImplementationLevel returns IMPLEMENTED_ID_AND_STATUS.
